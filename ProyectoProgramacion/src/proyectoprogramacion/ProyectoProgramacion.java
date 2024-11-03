@@ -49,6 +49,19 @@ public class ProyectoProgramacion {
             }
 
         }
+
+        Usuario user1=new Usuario(34,"Francisco","Marketing", "1");
+        Usuario user2=new Usuario(40, "Mariana","Comercio", "2");
+        Usuario user3 =new Usuario(24, "Felix", "Profesor de Baile", "3");
+        Usuario user4 =new Usuario(27,"Matthew","Entrenador personal", "4");
+        Usuario user5= new Usuario(50, "Francisca", "Directora ejecutiva","5");
+        
+        
+        JOptionPane.showMessageDialog(null, "edad : " + user3.getEdad());  
+        JOptionPane.showMessageDialog(null, "name : " + user3.getNom());
+        JOptionPane.showMessageDialog(null, "Puesto de trabajo : " + user3.getPuesto());  
+        JOptionPane.showMessageDialog(null, "ID: " + user3.getID()); 
+    
     }
 
 }
