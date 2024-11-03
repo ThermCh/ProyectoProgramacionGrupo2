@@ -19,7 +19,7 @@ public class Trabajador {
         NormalCoffe, Capuchino, CapuchinoV, Chocolate, Moka, Te_chai, iceCoffe
     }
 
-    public Usuario(int edad, String nom, String puesto, String ID) {
+    public Trabajador(int edad, String nom, String puesto, String ID) {
         this.edad=edad;
         this.nom=nom;
         this.puesto=puesto;
