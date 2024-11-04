@@ -11,43 +11,47 @@ import javax.swing.JOptionPane;
  * @author AMD
  */
 public class Barista {
-    public Trabajador menu;
-    boolean count=true;
-    public String hour="";
-    String condition="";
+ public static String menu = "";
+    public static int count = 0;
+    public String hour = "";
+    public static int bebida = 0;
+    public static int condi = 0;
 
-    public Trabajador getMenu() {
-        do {
-            condition= JOptionPane.showInputDialog("¿Quiere encargar una bebida? \n Sí/No"); 
-            
-            switch(condition){
-                case "sí":
-                count = count + 1;
-                JOptionPane.showMessageDialog(null, "Estás son sus opciones" + menu)
-                case "No":
-                JOptionPane.showMessageDialog(null, "Puede agregar una bebida en otro momento");
+    public Barista() {
+    }
+
+    public String getMenu() {
+        switch (bebida) {
+            case 1:
+                menu = "Cafe normal";
                 break;
-                default:
-                JOptionPane.showMessageDialog(null, "Ingreso un dato invalido");
+            case 2:
+                menu = "Capuchino";
                 break;
-            }
-        } while ();
+            case 3:
+                menu = "Capuchino Vainilla";
+                break;
+            case 4:
+                menu = "Chocolate";
+                break;
+            case 5:
+                menu = "Mokachino";
+                break;
+            case 6:
+                menu = "Te chai";
+                break;
 
-        return menu;
+            default:
+                menu = "cafe frio";
+                break;
+
+        }
+        return Barista.menu;
     }
 
-    public void setMenu(Trabajador menu) {
-        this.menu = menu;
-        
-    }
+    public void setMenu(String menu) {
 
-    public int getCount() {
-        
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
+        Barista.menu = menu;
     }
 
     public String getHour() {
@@ -58,10 +62,20 @@ public class Barista {
         this.hour = hour;
     }
 
-    public String getCondition() {
-        return condition;
+    public int getCount() {
+        return count;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public static void setCount(int count) {
+        Barista.count = count;
+    }
+
+    public int getBebida() {
+        return bebida;
+    }
+
+    public void setBebida(int bebida) {
+        this.bebida = bebida;
+    }
+
 }
