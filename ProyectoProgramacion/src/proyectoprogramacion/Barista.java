@@ -4,28 +4,26 @@
  */
 package proyectoprogramacion;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author AMD
  */
 public class Barista {
-    public Usuario menu;
-    int count=0;
+    public Trabajador menu;
+    boolean count=true;
     public String hour="";
     String condition="";
 
-    public Usuario getMenu() {
+    public Trabajador getMenu() {
         do {
-            JOptionPane.showMessageDialog(null, "¿Quiere encargar una bebida?"); 
-            JOptionPane.showConfirmDialog(null, "Choose one", "Choose one", JOptionPane.YES_NO_OPTION);
+            condition= JOptionPane.showInputDialog("¿Quiere encargar una bebida? \n Sí/No"); 
+            
             switch(condition){
                 case "sí":
                 count = count + 1;
-                JOptionPane.showMessageDialog(null, "Estás son sus opciones" + menu);
-                
-                 
-                    
-               
+                JOptionPane.showMessageDialog(null, "Estás son sus opciones" + menu)
                 case "No":
                 JOptionPane.showMessageDialog(null, "Puede agregar una bebida en otro momento");
                 break;
@@ -33,12 +31,12 @@ public class Barista {
                 JOptionPane.showMessageDialog(null, "Ingreso un dato invalido");
                 break;
             }
-        } while (count == 0);
+        } while ();
 
         return menu;
     }
 
-    public void setMenu(Usuario menu) {
+    public void setMenu(Trabajador menu) {
         this.menu = menu;
         
     }
