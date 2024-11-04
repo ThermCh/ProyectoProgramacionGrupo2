@@ -35,6 +35,36 @@ public class ProyectoProgramacion {
                     break;
                 case 5:
                     //Barista
+                    Barista.condi = Integer.parseInt(JOptionPane.showInputDialog("Desea añadir una bebida \n 1. Sí 2. No"));
+                    if (Barista.condi == 1) {
+                        switch (Barista.condi) {
+                            case 1:
+                                Barista.count = Barista.count + 1;
+                                Barista.bebida = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                            Estas son sus opciones
+                                                                             1. cafe normal
+                                                                             2.Capuchino 
+                                                                            3. Capuchino Vainilla 
+                                                                            4.Chocolate 
+                                                                            5. Mokachino 
+                                                                            6.Te_chai  
+                                                                             7.Cafe frio"""));
+                                break;
+
+                            case 2:
+                                JOptionPane.showMessageDialog(null, "Puede agregar una bebida en otro momento");
+
+                                break;
+
+                            default:
+                                JOptionPane.showMessageDialog(null, "Ingreso un dato invalido");
+                                break;
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Ya ingreso una bebida anteriormente");
+                    }
+                    JOptionPane.showMessageDialog(null, "Su bebida es:" + Barista.menu);
+                    break;
                     break;
                 case 6:
                     ciclo=false;
