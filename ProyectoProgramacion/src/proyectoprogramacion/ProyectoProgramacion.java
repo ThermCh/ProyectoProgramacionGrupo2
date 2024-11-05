@@ -7,26 +7,37 @@ public class ProyectoProgramacion {
     public static void main(String[] args) {
         boolean ciclo = true;
         int opcion = 0;
+        int cantidadAsientos=0;
+        Cine cine1 = new Cine();
 
         while (ciclo) {
-            opcion=Integer.parseInt(JOptionPane.showInputDialog("Hola!! \n"+"Que desea hacer\n"+
-                    "1.Salas Cine\n"+"2.Gimnasio\n"+"3.Sala de Yoga\n"+"4.Sala Baile\n"+"5.Barista\n"+"6.Salir"));
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("Hola!! \n" + "Que desea hacer\n"
+                    + "1.Salas Cine\n" + "2.Gimnasio\n" + "3.Sala de Yoga\n" + "4.Sala Baile\n" + "5.Barista\n" + "6.Salir"));
             switch (opcion) {
                 case 1:
-                    //Entrada Clase Cina
+                    //Entrada Clase Cine
+
+                    //Cantidad de espacios para el cine
+                    cantidadAsientos = Integer.parseInt(JOptionPane.showInputDialog("Cuantos asientos son?"));
+                    if (cine1.cantidadAsientos(cantidadAsientos) == -1) {
+                        JOptionPane.showMessageDialog(null, "La cantidad de asientos no es valida");
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Los asientos serian: " + cine1.getAsientos());
+                    }
                     break;
                 case 2:
                     //Entrada Clase Gimnasio
                     //Llamamos el metodo para asignar un entrenador
                     JOptionPane.showMessageDialog(null, "Hola desea asignar un entrenador");
-                    
+
                     //Añadir un entrenador
                     JOptionPane.showMessageDialog(null, "Desea crear un nuevo entrenador?");
-                    
+
                     //Mostrar entrenadores disponibles
                     JOptionPane.showMessageDialog(null, "Desea ver lo entrenadores dispinibles");
                     break;
-                    
+
                 case 3:
                     //Sala Yoga
                     break;
@@ -67,7 +78,7 @@ public class ProyectoProgramacion {
                     break;
                     break;
                 case 6:
-                    ciclo=false;
+                    ciclo = false;
                     break;
                 case 7:
                     break;
@@ -80,18 +91,17 @@ public class ProyectoProgramacion {
 
         }
 
-        Trabajador user1=new Trabajador(34,"Francisco","Marketing", "1");
-        Trabajador user2=new Trabajador(40, "Mariana","Comercio", "2");
-        Trabajador user3 =new Trabajador(24, "Felix", "Profesor de Baile", "3");
-        Trabajador user4 =new Trabajador(27,"Matthew","Entrenador personal", "4");
-        Trabajador user5= new Trabajador(50, "Francisca", "Directora ejecutiva","5");
-        
-        
-        JOptionPane.showMessageDialog(null, "edad : " + user3.getEdad());  
+        Trabajador user1 = new Trabajador(34, "Francisco", "Marketing", "1");
+        Trabajador user2 = new Trabajador(40, "Mariana", "Comercio", "2");
+        Trabajador user3 = new Trabajador(24, "Felix", "Profesor de Baile", "3");
+        Trabajador user4 = new Trabajador(27, "Matthew", "Entrenador personal", "4");
+        Trabajador user5 = new Trabajador(50, "Francisca", "Directora ejecutiva", "5");
+
+        JOptionPane.showMessageDialog(null, "edad : " + user3.getEdad());
         JOptionPane.showMessageDialog(null, "name : " + user3.getNom());
-        JOptionPane.showMessageDialog(null, "Puesto de trabajo : " + user3.getPuesto());  
-        JOptionPane.showMessageDialog(null, "ID: " + user3.getID()); 
-    
+        JOptionPane.showMessageDialog(null, "Puesto de trabajo : " + user3.getPuesto());
+        JOptionPane.showMessageDialog(null, "ID: " + user3.getID());
+
     }
 
 }
