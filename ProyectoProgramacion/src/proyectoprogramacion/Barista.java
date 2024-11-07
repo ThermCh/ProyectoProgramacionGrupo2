@@ -20,7 +20,7 @@ public class Barista {
     public Barista() {
     }
 
-    public String getMenu() {
+    public String getMenu(int bebida) {
         switch (bebida) {
             case 1:
                 menu = "Cafe normal";
