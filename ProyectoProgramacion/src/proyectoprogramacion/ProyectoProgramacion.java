@@ -25,11 +25,11 @@ public class ProyectoProgramacion {
                     } else {
                         JOptionPane.showMessageDialog(null, "Los asientos serian: " + cine1.getAsientos());
                     }
-                    break;
+                    break; 
                 case 2:
                     //Entrada Clase Gimnasio
                     //Llamamos el metodo para asignar un entrenador
-                    JOptionPane.showMessageDialog(null, "Hola desea asignar un entrenador");
+                    JOptionPane.showMessageDialog(null, "Hola, desea asignar un entrenador");
 
                     //Añadir un entrenador
                     JOptionPane.showMessageDialog(null, "Desea crear un nuevo entrenador?");
@@ -90,12 +90,19 @@ public class ProyectoProgramacion {
             }
 
         }
-
+        
+        //Usuarios
         Trabajador user1 = new Trabajador(34, "Francisco", "Marketing", "1");
         Trabajador user2 = new Trabajador(40, "Mariana", "Comercio", "2");
         Trabajador user3 = new Trabajador(24, "Felix", "Profesor de Baile", "3");
         Trabajador user4 = new Trabajador(27, "Matthew", "Entrenador personal", "4");
         Trabajador user5 = new Trabajador(50, "Francisca", "Directora ejecutiva", "5");
+        Trabajador user6 = new Trabajador(20, "Lucrecia", "Recepcionista", "6");
+        Trabajador user7 = new Trabajador(52, "Max", "Barista", 7);
+        Trabajador user8 = new Trabajador(22, "Armando", "Contador", 8);
+        Trabajador user9 = new Trabajador(18; "Julieta", "Secretaria",9);
+        
+        
 
         JOptionPane.showMessageDialog(null, "edad : " + user3.getEdad());
         JOptionPane.showMessageDialog(null, "name : " + user3.getNom());
