@@ -23,7 +23,7 @@ public class Barista {
     public String getMenu(int bebida) {
         switch (bebida) {
             case 1:
-                menu = "Cafe normal";
+                menu = "Café normal";
                 break;
             case 2:
                 menu = "Capuchino";
@@ -38,12 +38,15 @@ public class Barista {
                 menu = "Mokachino";
                 break;
             case 6:
-                menu = "Te chai";
+                menu = "Té chai";
                 break;
-
-            default:
-                menu = "cafe frio";
+         case 7:
+                menu = "Cafe frío";
                 break;
+          
+          default
+           JOptionPane.showMessageDialog(null, "No es un número válido");
+                break; 
 
         }
         return Barista.menu;
