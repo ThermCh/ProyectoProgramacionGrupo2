@@ -42,7 +42,7 @@ public class ProyectoProgramacion {
                     //Sala Yoga
                     break;
                 case 4:
-                    //Sala Yoga
+                    //Sala Baile
                     break;
                 case 5:
                     //Barista
@@ -52,14 +52,14 @@ public class ProyectoProgramacion {
                             case 1:
                                 Barista.count = Barista.count + 1;
                                 Barista.bebida = Integer.parseInt(JOptionPane.showInputDialog("""
-                                                                            Estas son sus opciones
-                                                                             1. cafe normal
+                                                                            Estas son sus opciones:
+                                                                             1. café normal
                                                                              2.Capuchino 
                                                                             3. Capuchino Vainilla 
                                                                             4.Chocolate 
                                                                             5. Mokachino 
-                                                                            6.Te_chai  
-                                                                             7.Cafe frio"""));
+                                                                            6.Té_chai  
+                                                                             7.Café frío"""));
                                 break;
 
                             case 2:
@@ -68,11 +68,11 @@ public class ProyectoProgramacion {
                                 break;
 
                             default:
-                                JOptionPane.showMessageDialog(null, "Ingreso un dato invalido");
+                                JOptionPane.showMessageDialog(null, "Ingresó un dato inválido");
                                 break;
                         }
                     } else {
-                        JOptionPane.showMessageDialog(null, "Ya ingreso una bebida anteriormente");
+                        JOptionPane.showMessageDialog(null, "Ya ingresó una bebida anteriormente");
                     }
                     JOptionPane.showMessageDialog(null, "Su bebida es:" + Barista.menu);
                     break;
@@ -84,7 +84,7 @@ public class ProyectoProgramacion {
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, "La opcion no es valida\nIntentelo otra vez");
+                    JOptionPane.showMessageDialog(null, "La opción no es válida\nInténtelo de nuevo");
                     break;
 
             }
@@ -100,9 +100,10 @@ public class ProyectoProgramacion {
         Trabajador user6 = new Trabajador(20, "Lucrecia", "Recepcionista", "6");
         Trabajador user7 = new Trabajador(52, "Max", "Barista", 7);
         Trabajador user8 = new Trabajador(22, "Armando", "Contador", 8);
-        Trabajador user9 = new Trabajador(18; "Julieta", "Secretaria",9);
-        
-        
+        Trabajador user9 = new Trabajador(18, "Julieta", "Secretaria",9);
+        Trabajador user10 = new Trabajador(35, "Marco", "Supervisor 1", 10);
+        Trabajador user11 = new Trabajador(56, "Carlos", "Supervisor 2", 11);
+        Trabajador user12 = new Trabajador(19, "Daniel", "Ingeniero en Sistemas", 12);
 
         JOptionPane.showMessageDialog(null, "edad : " + user3.getEdad());
         JOptionPane.showMessageDialog(null, "name : " + user3.getNom());
