@@ -11,7 +11,8 @@ import javax.swing.JOptionPane;
  * @author AMD
  */
 public class Barista {
- public static String menu = "";
+
+    public static String menu = "";
     public static int count = 0;
     public String hour = "";
     public static int bebida = 0;
@@ -40,13 +41,13 @@ public class Barista {
             case 6:
                 menu = "Té chai";
                 break;
-         case 7:
+            case 7:
                 menu = "Cafe frío";
                 break;
-          
-          default
-           JOptionPane.showMessageDialog(null, "No es un número válido");
-                break; 
+
+            default:
+                JOptionPane.showMessageDialog(null, "No es un número válido");
+                break;
 
         }
         return Barista.menu;
