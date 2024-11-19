@@ -9,5 +9,6 @@ package proyectoprogramacion;
  * @author AMD
  */
 public class Baile {
+    public int Clase1[]= new int[30];
     
 }
