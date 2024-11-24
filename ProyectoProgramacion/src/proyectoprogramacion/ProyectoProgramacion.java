@@ -11,6 +11,7 @@ public class ProyectoProgramacion {
         int cantidadAsientos = 0;
         Cine cine1 = new Cine();
         Entrenador trainer1 = new Entrenador();
+        int menu=0;
 
         //Crear array de entrenadores
         while (ciclo) {
@@ -64,36 +65,14 @@ public class ProyectoProgramacion {
                     break;
                 case 5:
                     //Barista
-                    Barista.condi = Integer.parseInt(JOptionPane.showInputDialog("Desea añadir una bebida \n 1. Sí 2. No"));
-                    if (Barista.condi == 1) {
-                        switch (Barista.condi) {
-                            case 1:
-                                Barista.count = Barista.count + 1;
-                                Barista.bebida = Integer.parseInt(JOptionPane.showInputDialog("""
-                                                                            Estas son sus opciones:
-                                                                             1. café normal
-                                                                             2.Capuchino 
-                                                                            3. Capuchino Vainilla 
-                                                                            4.Chocolate 
-                                                                            5. Mokachino 
-                                                                            6.Té_chai  
-                                                                             7.Café frío"""));
-                                break;
+                  //pedido de bebida
 
-                            case 2:
-                                JOptionPane.showMessageDialog(null, "Puede agregar una bebida en otro momento");
+                    menu = Integer.parseInt(JOptionPane.showInputDialog("¿Quiere pedir una bebida? \n 1.Sí 2.No"));
+                    if (menu == 1) {
+                        menu = Integer.parseInt(JOptionPane.showInputDialog("Sus opciones son: \n 1. Cafe normal \n 2. Capuchino \n 3. Capuchino Vainilla \n 4. Chocolate \n 5. Mokachino \n 6. Te chai \n 7.Cafe frio"));
 
-                                break;
-
-                            default:
-                                JOptionPane.showMessageDialog(null, "Ingresó un dato inválido");
-                                break;
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Ya ingresó una bebida anteriormente");
+                        Barista.drinkAssignment(menu, Barista.bebida, Barista.condi);
                     }
-                    JOptionPane.showMessageDialog(null, "Su bebida es:" + Barista.menu);
-                    break;
 
                 case 6:
                     ciclo = false;
