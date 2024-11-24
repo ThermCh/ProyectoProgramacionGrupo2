@@ -12,74 +12,49 @@ import javax.swing.JOptionPane;
  */
 public class Barista {
 
-    public static String menu = "";
-    public static int count = 0;
     public String hour = "";
-    public static int bebida = 0;
+    public static String bebida = ";
     public static int condi = 0;
 
-    public Barista() {
-    }
+   public static void drinkAssignment(int menu, String bebida, int condi) {
+        if (condi != 1) {
+            switch (menu) {
+                case 1:
+                    bebida = "Café normal";
+                    condi = condi + 1;
+                    break;
+                case 2:
+                    bebida = "Capuchino";
+                    condi = condi + 1;
+                    break;
+                case 3:
+                    bebida = "Capuchino Vainilla";
+                    condi = condi + 1;
+                    break;
+                case 4:
+                    bebida = "Chocolate";
+                    condi = condi + 1;
+                    break;
+                case 5:
+                    bebida = "Moka";
+                    condi = condi + 1;
+                    break;
+                case 6:
+                    bebida = "Te chai";
+                    condi = condi + 1;
+                    break;
+                case 7:
+                    bebida = "Café frió";
+                    condi = condi + 1;
+                default:
+                    JOptionPane.showMessageDialog(null, "la opción que ingreso no es válida");
 
-    public String getMenu(int bebida) {
-        switch (bebida) {
-            case 1:
-                menu = "Café normal";
-                break;
-            case 2:
-                menu = "Capuchino";
-                break;
-            case 3:
-                menu = "Capuchino Vainilla";
-                break;
-            case 4:
-                menu = "Chocolate";
-                break;
-            case 5:
-                menu = "Mokachino";
-                break;
-            case 6:
-                menu = "Té chai";
-                break;
-            case 7:
-                menu = "Cafe frío";
-                break;
-
-            default:
-                JOptionPane.showMessageDialog(null, "No es un número válido");
-                break;
-
+            }
+            JOptionPane.showMessageDialog(null, "su bebida es: " + bebida);
+        } else {
+            JOptionPane.showMessageDialog(null, "Ya ingreso su bebida anteriormente. Es: " + bebida);
         }
-        return Barista.menu;
     }
 
-    public void setMenu(String menu) {
-
-        Barista.menu = menu;
-    }
-
-    public String getHour() {
-        return hour;
-    }
-
-    public void setHour(String hour) {
-        this.hour = hour;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public static void setCount(int count) {
-        Barista.count = count;
-    }
-
-    public int getBebida() {
-        return bebida;
-    }
-
-    public void setBebida(int bebida) {
-        this.bebida = bebida;
-    }
 
 }
