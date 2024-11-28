@@ -73,7 +73,7 @@ public class ProyectoProgramacion {
 
                         Barista.drinkAssignment(menu, Barista.bebida, Barista.condi);
                     }
-
+                    break;
                 case 6:
                     ciclo = false;
                     break;
