@@ -46,6 +46,7 @@ public class Barista {
                 case 7:
                     bebida = "Café frió";
                     condi = condi + 1;
+                    break;
                 default:
                     JOptionPane.showMessageDialog(null, "la opción que ingreso no es válida");
 
