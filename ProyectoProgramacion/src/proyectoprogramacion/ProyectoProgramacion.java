@@ -11,7 +11,10 @@ public class ProyectoProgramacion {
         int cantidadAsientos = 0;
         Cine cine1 = new Cine();
         Entrenador trainer1 = new Entrenador();
+        Barista barista1 = new Barista();
+        int condi=0;
         int menu=0;
+        String comprobante;
 
         //Crear array de entrenadores
         while (ciclo) {
@@ -66,14 +69,22 @@ public class ProyectoProgramacion {
                 case 5:
                     //Barista
                   //pedido de bebida
-
+                     if (condi==0) {
+                        
                     menu = Integer.parseInt(JOptionPane.showInputDialog("¿Quiere pedir una bebida? \n 1.Sí 2.No"));
                     if (menu == 1) {
-                        menu = Integer.parseInt(JOptionPane.showInputDialog("Sus opciones son: \n 1. Cafe normal \n 2. Capuchino \n 3. Capuchino Vainilla \n 4. Chocolate \n 5. Mokachino \n 6. Te chai \n 7.Cafe frio"));
+                        barista1.setBebida(JOptionPane.showInputDialog("Sus opciones son: \n 1. Cafe normal \n 2. Capuchino \n 3. Capuchino Vainilla \n 4. Chocolate \n 5. Mokachino \n 6. Te chai \n 7.Cafe frio \n escriba su respuesta"));
+                       
 
-                        Barista.drinkAssignment(menu, Barista.bebida, Barista.condi);
+                      JOptionPane.showMessageDialog(null, "Su bebida se ha asignado correctamente, por lo que su pedido es: " + barista1.getBebida());
+                      JOptionPane.showMessageDialog(null, "Su bebida será entregada a las "+barista1.getHour());
+                      condi=condi+1;
                     }
-                    break;
+                    } else{
+                        JOptionPane.showMessageDialog(null, "ya cuenta con una bebida u esa bebida es: "+barista1.getBebida()+ "\nY sera entregada a las" +barista1.getHour());
+                    }
+
+                   
                 case 6:
                     ciclo = false;
                     break;
